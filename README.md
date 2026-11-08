@@ -8,18 +8,20 @@
 
 ## 复现材料
 
-报 issue 时，我尽量不只描述现象，而是给出可重跑的取证与对照实验：
+报 issue 时，我尽量不只描述现象：给出可重跑的取证、能判定的审计器，以及最小修法建议。
 
-📁 **[strange2000/dsh-repro](https://github.com/strange2000/dsh-repro)**
+📁 **[strange2000/dsh-repro](https://github.com/strange2000/dsh-repro)** —— 21 条已报问题的索引，按上游项目分组
 
-| 编号 | 上游 issue | 一句话 |
+| 上游项目 | 条数 | 可运行的材料 |
 |---|---|---|
-| 0001 | [slow-stack/mneme #493](https://github.com/slow-stack/mneme/issues/493) | 蒸馏解析失败后确定性无限重试同一窗口；三臂对照实验定位到「转录裸放 user」被模型当成对话续写 |
-| 0002 | [Ebony-Vinyl/dsh-our-free-model #427](https://github.com/Ebony-Vinyl/dsh-our-free-model/issues/427) | 应用内升级总是回滚：热重载窗口内无法确认新版本（激活版本不匹配） |
-| 0003 | [c1overzz/dsh-bili-scroll #47](https://github.com/c1overzz/dsh-bili-scroll/issues/47) | 桌面版装完即不可用的三处 bug：pythonPath 回落 / 设置互冲 / headless 缺凭证 |
+| [slow-stack/mneme](https://github.com/slow-stack/mneme/issues?q=is%3Aissue+author%3Astrange2000) | 8 | 保留期审计器 · T1 入口审计器 · 取证脚本 + 三臂对照 |
+| [c1overzz/dsh-bili-scroll](https://github.com/c1overzz/dsh-bili-scroll/issues?q=is%3Aissue+author%3Astrange2000) | 5 | 只读审计器（8 项判定：判重表 / 白名单 / 当日上限） |
+| dsh-web · dsh-archive-manager | 3 | `settings.section` 共享 id 冲突扫描器 |
+| dsh-desktop · dsh-ntr · dsh-our-free-model | 5 | 应用内升级激活审计器 |
 
-每份材料包含：只读取证脚本（真实数据库 / 日志）+ 可重跑的对照实验 + 最小修法建议。
+材料是**只读取证脚本或审计器**（真实数据库 / 日志 / 安装目录，零依赖、不写盘），自带 `--selftest`：先用「缺陷形状」与「修复后形状」的合成源码验证判定器分得开，再给结论。所以它回答的不是「怎么复现一次」，而是「**我这份版本还会不会这样**」—— 插件降级、或换一台还在旧版本的机器，一条命令就能确认缺陷有没有回来。
 
+另有 6 份报告，其中 0004–0006 讲结构性问题而非单条：共享 `settings.section` id 没有契约、两个「不抛错」的缺陷、三个「静默降级」。
 ## 协议 / 工具
 
 📁 **[strange2000/mneme-dual-boot](https://github.com/strange2000/mneme-dual-boot)** · MIT
