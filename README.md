@@ -1,5 +1,7 @@
 # 陌生壬
 
+🌐 落地页：**[strange2000.github.io](https://strange2000.github.io/)**
+
 合肥。日常在 Windows 上用 DSH（DeepSeek Harness）搭工作流，也折腾 macOS（Intel）上的一些国产客户端。
 
 习惯：撞到 bug 就查到底 —— 从日志、数据库、二进制里取证，把「能跑的证据」写清楚，再报给上游。
