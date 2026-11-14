@@ -40,6 +40,10 @@ issue 攒到 21 条之后能看出规律了：**同一个错误会被不同作�
 
 协议规范 + 恢复手册 + 零依赖参考实现 `handoff.mjs`（`open` / `close` / `status` / `recover`），附 Windows 与 macOS 在同一块 exFAT 卷上的实测数据。三个跨端差异都写清了：mtime 粒度（2 s vs 10 ms）、符号链接（不支持 vs 可以建）、`chmod`（两端都无效，macOS 上更是彻底空操作）。还有一个「WAL 凭空消失」的悬案也已查清 —— 根因是 V8 的 GC 回收了数据库句柄，不是文件系统劫持了写入。
 
+📁 **[strange2000/resource-search-lite](https://github.com/strange2000/resource-search-lite)** · MIT · 零依赖
+
+两件互不依赖的东西：`scripts/` 是 POSIX shell + curl 的命令行检索（网盘分享链接 / 磁力 / 苹果 CMS 直链，按做种数、体积、清晰度排序），`web/index.html` 是双击就能打开的单文件网页。只要 curl 和 shell —— 不需要 Node、不需要构建、没有后端；网页版中英双语，只聚合公开索引，不托管、不存储、不分发任何文件。
+
 ## 我报 issue 的三条纪律
 
 1. **只读取证**：先证明事实，再猜原因。审计表、游标、日志逐条对齐，不做「大概是」的推断。
