@@ -40,6 +40,10 @@ issue 攒到 21 条之后能看出规律了：**同一个错误会被不同作�
 
 协议规范 + 恢复手册 + 零依赖参考实现 `handoff.mjs`（`open` / `close` / `status` / `recover`），附 Windows 与 macOS 在同一块 exFAT 卷上的实测数据。三个跨端差异都写清了：mtime 粒度（2 s vs 10 ms）、符号链接（不支持 vs 可以建）、`chmod`（两端都无效，macOS 上更是彻底空操作）。还有一个「WAL 凭空消失」的悬案也已查清 —— 根因是 V8 的 GC 回收了数据库句柄，不是文件系统劫持了写入。
 
+📁 **[strange2000/dsh-tight-sidebar](https://github.com/strange2000/dsh-tight-sidebar)** · MIT · 纯 CSS
+
+把 DSH 侧边栏的纵向空间还给「工作区」：全局面板省 110px、页脚动作省 80px、收掉 36px 遗留空带，会话列表多显示 6 条。不碰颜色 / 材质 / 字体，只在侧边栏展开态生效；仓库里带 `validate-skin.mjs` 与 CI 校验、Issue 模板和回滚说明。
+
 📁 **[strange2000/resource-search-lite](https://github.com/strange2000/resource-search-lite)** · MIT · 零依赖
 
 两件互不依赖的东西：`scripts/` 是 POSIX shell + curl 的命令行检索（网盘分享链接 / 磁力 / 苹果 CMS 直链，按做种数、体积、清晰度排序），`web/index.html` 是双击就能打开的单文件网页。只要 curl 和 shell —— 不需要 Node、不需要构建、没有后端；网页版中英双语，只聚合公开索引，不托管、不存储、不分发任何文件。
