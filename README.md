@@ -48,6 +48,10 @@ issue 攒到 21 条之后能看出规律了：**同一个错误会被不同作�
 
 两件互不依赖的东西：`scripts/` 是 POSIX shell + curl 的命令行检索（网盘分享链接 / 磁力 / 苹果 CMS 直链，按做种数、体积、清晰度排序），`web/index.html` 是双击就能打开的单文件网页。冷门新片在聚合站常常全是 0 条，于是另有两条兜底支路：豆瓣讨论区捞**社群首发**、subhd 按 sid 取**字幕**转标准 SRT（m3u8 也能直接落成本地 `.ts`）。只要 curl 和 shell —— 不需要 Node、不需要构建、没有后端；网页版中英双语，只聚合公开索引，不托管、不存储、不分发任何文件。
 
+📁 **[strange2000/bark-icons](https://github.com/strange2000/bark-icons)** · MIT
+
+Bark 推送用的应用图标：512×512 透明背景 PNG，`icon` 参数直接拼 raw 直链即可；附 jsDelivr 镜像写法，`raw.githubusercontent.com` 超时时换域名。给 iOS 的「信息」「短信」各做了一版。
+
 ## 我报 issue 的三条纪律
 
 1. **只读取证**：先证明事实，再猜原因。审计表、游标、日志逐条对齐，不做「大概是」的推断。
