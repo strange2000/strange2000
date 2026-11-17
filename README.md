@@ -46,7 +46,7 @@ issue 攒到 21 条之后能看出规律了：**同一个错误会被不同作�
 
 📁 **[strange2000/resource-search-lite](https://github.com/strange2000/resource-search-lite)** · MIT · 零依赖
 
-两件互不依赖的东西：`scripts/` 是 POSIX shell + curl 的命令行检索（网盘分享链接 / 磁力 / 苹果 CMS 直链，按做种数、体积、清晰度排序），`web/index.html` 是双击就能打开的单文件网页。冷门新片在聚合站常常全是 0 条，于是另有两条兜底支路：豆瓣讨论区捞**社群首发**、subhd 按 sid 取**字幕**转标准 SRT（m3u8 也能直接落成本地 `.ts`）。只要 curl 和 shell —— 不需要 Node、不需要构建、没有后端；网页版中英双语，只聚合公开索引，不托管、不存储、不分发任何文件。
+两件互不依赖的东西：`scripts/` 是 POSIX shell + curl 的命令行检索（网盘分享链接 / 磁力 / 苹果 CMS 直链，按做种数、体积、清晰度排序），`web/index.html` 是双击就能打开的单文件网页。冷门新片在聚合站常常全是 0 条，于是另有两条兜底支路：豆瓣讨论区捞**社群首发**、subhd 按 sid 取**字幕**转标准 SRT（m3u8 也能直接落成本地 `.ts`）。结果可先用正则标题闸（`--留` / `--剔`）筛一遍再打分；网盘内置主备两台，主实例没货自动换台。只要 curl 和 shell —— 不需要 Node、不需要构建、没有后端；网页版中英双语，只聚合公开索引，不托管、不存储、不分发任何文件。
 
 📁 **[strange2000/bark-icons](https://github.com/strange2000/bark-icons)** · MIT
 
