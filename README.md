@@ -10,7 +10,7 @@
 
 📁 **[strange2000/awesome-dsh](https://github.com/strange2000/awesome-dsh)** —— 六类缺陷模式 + 发布前自查 10 条 + 排障顺序 · MIT · [中文](https://github.com/strange2000/awesome-dsh/blob/main/README.md) / [EN](https://github.com/strange2000/awesome-dsh/blob/main/README.en.md)
 
-issue 攒到 21 条之后能看出规律了：**同一个错误会被不同作者各自重犯一遍**。这份地图只收「有规律」的那部分 ——
+issue 攒到二十几条之后能看出规律了：**同一个错误会被不同作者各自重犯一遍**。这份地图只收「有规律」的那部分 ——
 
 - **六类模式**：共享注册 id 没有契约 · 静默降级（读不到当没有 / 写不进当没改 / 数不到当 0）· 热重载确认不了版本于是把装好的升级撤掉 · 硬编码宿主布局 · 有保留期却没有键指向它 · 手写白名单 vs `DEFAULTS` 双真相
 - 每条四段：症状 → 判据 → 最小修法 → 案例；判据都是「一次 grep / 一条命令」级别，不要求读完源码
@@ -20,7 +20,7 @@ issue 攒到 21 条之后能看出规律了：**同一个错误会被不同作�
 
 报 issue 时，我尽量不只描述现象：给出可重跑的取证、能判定的审计器，以及最小修法建议。
 
-📁 **[strange2000/dsh-repro](https://github.com/strange2000/dsh-repro)** —— 21 条已报问题的索引，按上游项目分组
+📁 **[strange2000/dsh-repro](https://github.com/strange2000/dsh-repro)** —— 22 条已报问题的索引，按上游项目分组
 
 | 上游项目 | 条数 | 可运行的材料 |
 |---|---|---|
